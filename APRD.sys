@@ -1,0 +1,309 @@
+TraceList
+{
+	 Trace                      TraceIndent OFF
+	 Trace                       TraceStack OFF
+	 Trace                        TraceExit OFF
+	 Trace                ActivationManager OFF
+	 Trace                      Application OFF
+	 Trace                ApplicationStream OFF
+	 Trace                     Application5 OFF
+	 Trace                  ApplicationBase OFF
+	 Trace               ApplicationManager OFF
+	 Trace                            Combo OFF
+	 Trace                        ComboList OFF
+	 Trace                    CommandSource OFF
+	 Trace                   DataController OFF
+	 Trace                   DataSourceTape ON
+	 Trace                      DataManager OFF
+	 Trace                    DataProcessor OFF
+	 Trace                       Diagnostic OFF
+	 Trace                 EncoderProcessor OFF
+	 Trace                 FilterBackground OFF
+	 Trace                   FileDataSource OFF
+	 Trace                          FileLua OFF
+	 Trace                   FilterPosition OFF
+	 Trace                      FilterUser1 OFF
+	 Trace                      FilterUser2 OFF
+	 Trace                      FilterUser3 OFF
+	 Trace              FLDataManagerWindow OFF
+	 Trace                  FLDistanceChart OFF
+	 Trace                    FLFieldViewer OFF
+	 Trace                      FLFreqChart OFF
+	 Trace                    FLImageWindow OFF
+	 Trace                  FLTextureWindow OFF
+	 Trace                      FLTimeChart OFF
+	 Trace                         FLWindow OFF
+	 Trace                     FrameLibrary OFF
+	 Trace                    FXFieldViewer OFF
+	 Trace                     HardwareSync OFF
+	 Trace                    HardwareAsync OFF
+	 Trace                       HardwareEx OFF
+	 Trace                     HardwareBase OFF
+	 Trace           DataSourceHardwareSync OFF
+	 Trace                     ImageManager OFF
+	 Trace               ImageReconstructor OFF
+	 Trace                         ReconIMG OFF
+	 Trace                         ReconABS OFF
+	 Trace                         ReconMTG OFF
+	 Trace                         ReconReL OFF
+	 Trace                     IMG_Analysis OFF
+	 Trace                         Messages OFF
+	 Trace                  PacketProcessor OFF
+	 Trace             PacketProcessorAsync OFF
+	 Trace                       PacketSink OFF
+	 Trace                     PacketSource OFF
+	 Trace                     RadarProgram OFF
+	 Trace                     SAR_Analysis OFF
+	 Trace                     SAR_Analysis OFF
+	 Trace                     ScaleManager OFF
+	 Trace                           Sensor OFF
+	 Trace                     SensorStatus OFF
+	 Trace                           Socket OFF
+	 Trace                      SocketError OFF
+	 Trace                          Startup ON
+	 Trace                   TapeController OFF
+	 Trace                     TapeRecorder OFF
+	 Trace                  ThreadAssembler OFF
+	 Trace                ThreadAcquisition OFF
+	 Trace                   ThreadAnalysis OFF
+	 Trace                  ThreadInterface OFF
+	 Trace                   ThreadDataSink OFF
+	 Trace                ThreadCombination OFF
+	 Trace                    WindowManager OFF
+}
+
+ParameterList
+{
+	 Parameter systemTime
+	 Parameter timeStamp
+	 Parameter *
+	 Parameter frameNumber
+	 Parameter frameRate
+	 Parameter *
+	 Parameter sweepNumber
+	 Parameter sweepRate
+	 Parameter *
+	 Parameter nDataPoints
+	 Parameter startFreq
+	 Parameter stopFreq
+	 Parameter scanRate
+	 Parameter *
+	 Parameter nFFTPoints
+	 Parameter freqStep
+	 Parameter timeStep
+}
+
+Global
+{
+	 defaultConfiguration aprd.cfg
+	 enableScriptFile TRUE
+	 defaultScriptFile aprd.lua
+	 workingDataDirectory ScratchData
+	 workingAnalDirectory ScratchAnalysis
+	 applicationWindowX    1
+	 applicationWindowY   31
+	 applicationWindowW 1920
+	 applicationWindowH 1017
+	 applicationTypeWhenReplaying    0
+	 applicationTypeWhenRecording    0
+	 applicationWindowType    0
+}
+
+AttributeList
+{
+	 Attribute DeleteWithoutAsking OFF
+	 Attribute UseNativeDialogs ON
+	 Attribute UsePlasticWindowStyle ON
+	 Attribute EnableTooltips ON
+	 Attribute RealTimePlayback OFF
+	 Attribute MultiThreaded ON
+	 Attribute SaveWindowLocations ON
+	 Attribute EnableRemoteOperation OFF
+	 Attribute EnableRadarProgramOnly OFF
+	 Attribute LUATraceExecution OFF
+	 Attribute EnableConsumerPrecedence ON
+	 Attribute DisablePortRestriction ON
+	 Attribute LockWindowUponActivation OFF
+	 Attribute ActivateWindowUponStartup ON
+	 Attribute EnableAsyncHardware ON
+	 Attribute EnableVirtualMemory ON
+	 Attribute AllowDataFileOverride OFF
+	 Attribute AutoDisplayImageMonitor OFF
+	 Attribute AutoDisplayTapeMonitor ON
+	 Attribute EnableNullingCalibration OFF
+	 Attribute EnableComboThread OFF
+	 Attribute EnableImageThread ON
+	 Attribute UseDefaultColorScheme OFF
+	 Attribute ResetEncodersUponStartup OFF
+}
+
+LUAFunctionList1
+{
+	Function "Noise Analysis" "LuaProg/Tool-Noise-Analysis.Lua" OFF
+	Function "Data Processing Tools" "LuaProg/Tool-Data-Proc.lua" ON
+	Function "Throughput" "LuaProg/Tool-Throughput.lua" OFF
+	Function "Cross Plot Data" "LuaProg/Tool-XPlot-Tape.lua" OFF
+	Function "Consolidate Data" "LuaProg/Tool-Consolidate-Tape.lua" OFF
+	Function "Data Envelope" "LuaProg/Tool-Envelope-Tape.Lua" ON
+	Function "Data Summary" "LuaProg/Tool-Data-Summary.Lua" OFF
+}
+
+LUAFunctionList2
+{
+	Function "Envelope" "LuaProg/Tool-Envelope-Tape.Lua" ON
+	Function "Window [Sync]" "LuaProg/Tool-Window.lua" ON
+	Function "Display Raw ASCII" "LuaProg/Tool-Display-ASCII.Lua" OFF
+	Function "Data Summary" "LuaProg/Tool-Data-Summary.Lua" OFF
+}
+
+LUAFunctionList3
+{
+	Function "Histogram" "LuaProg/Tool-Histogram.Lua" OFF
+	Function "Threshold [Sync]" "LuaProg/Tool-Threshold.Lua" ON
+	Function "Waterfall [Sync]" "LuaProg/Tool-Surface-To-Waterfall.Lua" ON
+	Function "Save Matrix" "LuaProg/Tool-Image-Save-Matrix.Lua" OFF
+	Function "Load Matrix" "LuaProg/Tool-Image-Load-Matrix.Lua" ON
+	Function "Stats" "LuaProg/Tool-Image-Stats.Lua" OFF
+}
+
+LUAFunctionList4
+{
+	Function "Derivative" "LuaProg/Tool-Derivative.Lua" OFF
+	Function "Integral" "LuaProg/Tool-Integral.Lua" ON
+	Function "Running Average" "LuaProg/Tool-Running-Average.Lua" ON
+	Function "Display Raw ASCII" "LuaProg/Tool-Display-ASCII-Chart.Lua" OFF
+	Function "Data Summary" "LuaProg/Tool-Data-Summary.Lua" OFF
+}
+
+LUAFunctionList5
+{
+	Function "Histogram" "LuaProg/Tool-Histogram.Lua" OFF
+	Function "Threshold [Sync]" "LuaProg/Tool-Threshold.Lua" ON
+	Function "Waterfall [Sync]" "LuaProg/Tool-Surface-To-Waterfall.Lua" ON
+	Function "Save Matrix" "LuaProg/Tool-Image-Save-Matrix.Lua" OFF
+	Function "Load Matrix" "LuaProg/Tool-Image-Load-Matrix.Lua" ON
+	Function "Stats" "LuaProg/Tool-Image-Stats.Lua" OFF
+}
+
+LUAFunctionList6
+{
+	Function "Envelope" "LuaProg/Tool-Envelope-Tape.Lua" ON
+	Function "Window [Sync]" "LuaProg/Tool-Window.lua" ON
+	Function "Display Raw ASCII" "LuaProg/Tool-Display-ASCII.Lua" OFF
+	Function "Data Summary" "LuaProg/Tool-Data-Summary.Lua" ON
+	Function "Spawn Markers" "Tool-Chart-Markers.Lua" OFF
+}
+
+WindowActivationList
+{
+}
+
+DiagnosticTypeList
+{
+}
+
+Communications
+{
+	inputPort 1024
+	outputPort 32000
+	commandPort 33000
+	timeoutScan 276
+	timeoutCommand 120
+	timeoutOSync 2000
+	timeoutMSync 100
+	broadcastAddress 192.168.1.255
+	clientAddress 192.168.1.118
+	minRetrySweeps 10
+}
+
+WindowState
+{
+	State INVALID_TYPE 0 "" 216 239 700 350
+	State FL_ANALYSIS_WINDOW 0 "" 700 84 484 400
+	State FL_ANALYSIS_WINDOW 1 "" 301 287 500 400
+	State FL_APPLICATION_WINDOW 0 "" 1 31 958 1006
+	State FL_CHART_WINDOW 0 "" 420 327 500 382
+	State FL_CHART_WINDOW 1 "" 55 122 500 400
+	State FL_CHART_WINDOW 2 "" 0 27 1366 693
+	State FL_CONFIG_FILTER 0 "Background" 164 187 600 310
+	State FL_CONFIG_HARDWARE 0 "Scan" 38 250 800 400
+	State FL_CONFIG_SYSTEM 0 "Communications" 727 356 600 340
+	State FL_CONFIG_MENU 0 "Application" 78 100 700 360
+	State FL_CONFIG_ACTIVATION 0 "Activation" 228 250 600 400
+	State FL_DASHBOARD_WINDOW 0 "" 218 257 400 400
+	State FL_DATA_EDITOR_WINDOW 0 "" 29 112 500 360
+	State FL_DATA_MANAGER_WINDOW 0 "Data" 46 107 500 360
+	State FL_DATA_MONITOR_WINDOW 0 "" 1175 139 500 400
+	State FL_DATA_MONITOR_WINDOW 1 "" 165 409 500 400
+	State FL_IMAGE_MONITOR_WINDOW 0 "" 86 109 700 350
+	State FL_DISTANCE_WINDOW 0 "" 588 106 726 467
+	State FL_EDITOR_WINDOW 0 "" 471 128 600 400
+	State FL_EDITOR_WINDOW 1 "" 562 122 700 350
+	State FL_FIELD_VIEWER 0 "" 1215 361 500 400
+	State FL_FREQ_WINDOW 0 "" 191 538 731 496
+	State FL_IM_FREQ_WINDOW 0 "" 1042 447 500 400
+	State FL_IM_TIME_WINDOW 0 "" 131 483 500 400
+	State FL_IMAGE_CONTROL_PANEL 0 "Recon" 100 209 550 330
+	State FL_IMAGE_WINDOW 0 "" 1252 438 500 400
+	State FL_PHASE_FREQ_WINDOW 0 "" 774 210 500 400
+	State FL_PHASE_TIME_WINDOW 0 "" 1072 43 500 400
+	State FL_RE_FREQ_WINDOW 0 "" 1358 64 500 400
+	State FL_RE_TIME_WINDOW 0 "" 632 774 1006 300
+	State FL_SCRIPT_WINDOW 0 "" 570 133 600 400
+	State FL_SCRIPT_WINDOW 1 "" 58 140 877 741
+	State FL_SENSOR_STATUS_WINDOW 0 "" 170 62 1030 110
+	State FL_STATUS_WINDOW 0 "" 926 582 303 390
+	State FL_TABBED_WINDOW 0 "File Output" 503 166 500 355
+	State FL_TEXT_WINDOW 0 "" 720 36 500 675
+	State FL_TEXTURE_WINDOW 0 "" 651 217 500 400
+	State FL_TIME_WINDOW 0 "" 997 87 500 398
+	State FL_TOOLS_SUMMARY_WINDOW 0 "" 216 239 600 400
+	State FL_UNWRAP_FREQ_WINDOW 0 "" 610 451 500 400
+	State FL_UNWRAP_TIME_WINDOW 0 "" 1189 502 500 400
+	State FL_2D_WINDOW 0 "" 525 122 500 400
+}
+
+WindowHelpList
+{
+	Help FL_ANALYSIS_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_APPLICATION_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_CHART_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_CONFIG_FILTER "./Documentation/APRDManual.pdf"
+	Help FL_CONFIG_HARDWARE "./Documentation/APRDManual.pdf"
+	Help FL_CONFIG_SYSTEM "./Documentation/APRDManual.pdf"
+	Help FL_CONFIG_MENU "./Documentation/APRDManual.pdf"
+	Help FL_CONFIG_ACTIVATION "./Documentation/APRDManual.pdf"
+	Help FL_DASHBOARD_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_DATA_EDITOR_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_DATA_MANAGER_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_DATA_MONITOR_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_IMAGE_MONITOR_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_DISTANCE_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_EDITOR_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_FIELD_VIEWER "./Documentation/APRDManual.pdf"
+	Help FL_FREQ_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_IM_FREQ_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_IM_TIME_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_IMAGE_CONTROL_PANEL "./Documentation/APRDManual.pdf"
+	Help FL_IMAGE_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_PHASE_FREQ_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_PHASE_TIME_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_RE_FREQ_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_RE_TIME_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_SCRIPT_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_SENSOR_CONTROL_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_SENSOR_STATUS_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_STATUS_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_TABBED_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_TEXT_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_TEXTURE_CONTROL_PANEL "./Documentation/APRDManual.pdf"
+	Help FL_TEXTURE_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_TIME_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_TOOLS_SUMMARY_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_UNWRAP_FREQ_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_UNWRAP_TIME_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_2D_CONTROL_PANEL "./Documentation/APRDManual.pdf"
+	Help FL_2D_WINDOW "./Documentation/APRDManual.pdf"
+	Help FL_3D_WINDOW "./Documentation/APRDManual.pdf"
+}
+
